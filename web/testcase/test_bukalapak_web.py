@@ -12,11 +12,7 @@ def test_success_search_product(browser):
     # When user search product
     HomePage(browser).search_product(productname)
 
-    # Then showing web title of search
-    title_array = SearchResult(browser).web_title_result().split(' ')
-    assert productname in title_array
-
-    # And showing title result of products
+    # Then showing title result of products
     assert 'Hasil pencarian' in browser.page_source
     assert SearchResult(browser).page_result_title() in browser.page_source
 
@@ -28,6 +24,10 @@ def test_success_search_product(browser):
     match = [product_name for product_name in title if productname in product_name]
     assert len(match) > 0
 
+    # And showing web title of search
+    title_array = SearchResult(browser).web_title_result().split(' ')
+    assert productname in title_array
+
 def test_not_found_search_product(browser):
     # variable
     productname = 'Kdsfl'
@@ -38,11 +38,7 @@ def test_not_found_search_product(browser):
     # When user search product
     HomePage(browser).search_product(productname)
 
-    # Then showing web title of search
-    title_array = SearchResult(browser).web_title_result().split(' ')
-    assert productname in title_array
-
-    # And showing title result of products
+    # Then showing title result of products
     assert 'Hasil pencarian' in browser.page_source
     assert SearchResult(browser).page_result_title() in browser.page_source
 
@@ -51,6 +47,10 @@ def test_not_found_search_product(browser):
 
     # And product not found
     assert 'Maaf, barangnya tidak ketemu' in browser.page_source
+
+    # And showing web title of search
+    title_array = SearchResult(browser).web_title_result().split(' ')
+    assert productname in title_array
 
 def test_no_result_without_input_product(browser):
     # variable
