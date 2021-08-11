@@ -15,8 +15,14 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt -U
 ```
 
+- **install webdriver.** Webdriver will open web and run your step automation. I test using Chromdriver which chrome's webdriver that you can donwload here: https://chromedriver.chromium.org/. In order to install firefox geckodriver, visi here: https://github.com/mozilla/geckodriver/releases/. Then, move installer to `/usr/local/bin` to excutable.
+```
+$ mv ~/Downloads/chromedriver /usr/local/bin
+```
+
 ## How to run
-### API
+### Local
+#### API and Web
 ```
 python -m pytest -sv --html reports/report.html
 ```

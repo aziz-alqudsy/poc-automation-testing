@@ -1,6 +1,6 @@
 import requests
 from jsonschema import validate
-from api.libs.get_schema import GetSchema
+from libs.get_schema import get_schema_file
 
 def test_get_api():
     # hit api success 200
@@ -10,7 +10,7 @@ def test_get_api():
     # verify status code from response
     assert get_api_200.status_code == 200
     # verify data type from response
-    validate(instance=response_json, schema=GetSchema.get_schema_file("api/schema/schema_get_api_200.json"))
+    validate(instance=response_json, schema=get_schema_file("api/schema/schema_get_api_200.json"))
 
 def test_post_api():
     # request data
@@ -29,4 +29,4 @@ def test_post_api():
     assert response_json['body'] == request_data['body']
     assert int(response_json['userId']) == request_data['userId']
     # verify data type from response
-    validate(instance=response_json, schema=GetSchema.get_schema_file("api/schema/schema_post_api_201.json"))
+    validate(instance=response_json, schema=get_schema_file("api/schema/schema_post_api_201.json"))
