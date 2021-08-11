@@ -1,0 +1,7 @@
+{
+    "platformName": "Android",
+    "deviceName": "emulator-5554",
+    "version": "11.0.0",
+    "app": "/Users/aziz/github/poc-automation-testing/artifacts/Sample Android App Login Test_v4.0_apkpure.com.apk",
+    "runnerURL": "http://localhost:4723/wd/hub"
+}
