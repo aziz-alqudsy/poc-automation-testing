@@ -82,6 +82,7 @@ $ appium
 - open avd manager and create emulator.
 - install apk in emulator using drag and drop.
 - run test.
+
 sequensial run:
 ```
 $ python -m pytest -sv --html reports/report.html
