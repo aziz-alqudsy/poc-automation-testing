@@ -74,7 +74,7 @@ paralel run:
 $ python -m pytest -n <number> -sv --html reports/report.html
 ```
 
-### Mobile
+#### Mobile
 - run appium.
 ```
 $ appium
