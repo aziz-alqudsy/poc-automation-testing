@@ -87,3 +87,8 @@ sequensial run:
 ```
 $ python -m pytest -sv --html reports/report.html
 ```
+
+### Remote
+- Run docker `compose docker-compose -f docker-compose-v3.yml up -d`
+- Build image testing for docker file `docker build -t aziz/seleniumhub:0.1 .`
+- Run container seleniumhub using `docker run --net=host test aziz/seleniumhub:0.1`
