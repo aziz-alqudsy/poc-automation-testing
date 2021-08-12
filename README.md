@@ -87,8 +87,3 @@ sequensial run:
 ```
 $ python -m pytest -sv --html reports/report.html
 ```
-
-paralel run:
-```
-$ python -m pytest -n <number> -sv --html reports/report.html
-```
