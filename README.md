@@ -89,6 +89,11 @@ $ python -m pytest -sv --html reports/report.html
 ```
 
 ### Remote
-- Run docker `compose docker-compose -f docker-compose-v3.yml up -d`
-- Build image testing for docker file `docker build -t aziz/seleniumhub:0.1 .`
-- Run container seleniumhub using `docker run --net=host test aziz/seleniumhub:0.1`
+- Build image testing for docker file `docker build -t aziz/automationtest:0.1 .`
+#### API
+- Run container automationtest using `docker run --net=host apitest aziz/automationtest:0.1`
+#### Web
+- Run docker compose `docker-compose -f docker-compose-v3.yml up -d`
+- Run container seleniumhub using `docker run --net=host webtest aziz/automationtest:0.1 web`
+#### Mobile
+- Run container automationtest using `docker run --net=host mobiletest aziz/automationtest:0.1 mobile`

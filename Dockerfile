@@ -10,3 +10,4 @@ RUN pip install -r requirements.txt
 RUN chmod +x /poc-automation-testing/entrypoint.sh
 
 ENTRYPOINT [ "/poc-automation-testing/entrypoint.sh" ]
+CMD [ "api" ]
